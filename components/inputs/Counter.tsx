@@ -12,8 +12,6 @@ type Props = {
 
 const Counter = ({ title, subtitle, value, onChange }: Props) => {
   const onAdd = React.useCallback(() => {
-    console.log(value);
-
     onChange(value + 1);
   }, [onChange, value]);
 
@@ -24,9 +22,11 @@ const Counter = ({ title, subtitle, value, onChange }: Props) => {
 
   return (
     <div className="flex flex-row items-center justify-between">
-      <div className="flex flex-col">
-        <div className="font-medium">{title}</div>
-        <div className="font-light text-gray-600">{subtitle}</div>
+      <div className="flex flex-row items-center justify-between w-full">
+        <div>
+          <div className="font-medium">{title}</div>
+          <div className="font-light text-gray-600">{subtitle}</div>
+        </div>
         <div className="flex flex-row items-center gap-4">
           <div
             onClick={onReduce}
