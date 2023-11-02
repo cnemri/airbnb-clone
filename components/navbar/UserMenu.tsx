@@ -7,7 +7,7 @@ import useRegisterModal from "@/hooks/useRegisterModal";
 import useLoginModal from "@/hooks/useLoginModal";
 import MenuItem from "./MenuItem";
 import Avatar from "../Avatar";
-import { SafeUser } from "@/app/types";
+import { SafeUser } from "@/types";
 import useRentModal from "@/hooks/useRentModal";
 
 type Props = {
