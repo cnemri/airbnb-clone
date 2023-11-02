@@ -2,12 +2,14 @@
 import Image from "next/image";
 import React from "react";
 
-type Props = {};
+type Props = {
+  src?: string;
+};
 
-const Avatar = (props: Props) => {
+const Avatar = ({ src }: Props) => {
   return (
     <Image
-      src="/images/placeholder.jpg"
+      src={src || "/images/placeholder.jpg"}
       alt="Avatar"
       width={30}
       height={30}

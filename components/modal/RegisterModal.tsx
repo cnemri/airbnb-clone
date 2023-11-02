@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import axios from "axios";
-import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
@@ -12,6 +11,7 @@ import Heading from "../Heading";
 import Input from "../inputs/Input";
 import Button from "../Button";
 import useLoginModal from "@/hooks/useLoginModal";
+import { signIn } from "next-auth/react";
 
 type Props = {};
 
@@ -85,13 +85,17 @@ const RegisterModal = (props: Props) => {
         outline
         label="Continue with Google"
         Icon={FcGoogle}
-        onClick={() => {}}
+        onClick={() => {
+          signIn("google");
+        }}
       />
       <Button
         outline
         label="Continue with GitHub"
         Icon={FaGithub}
-        onClick={() => {}}
+        onClick={() => {
+          signIn("github");
+        }}
       />
       <div className="text-neutral-500 text-center mt-4 font-light">
         <div className="flex flex-row items-center justify-center gap-2">
