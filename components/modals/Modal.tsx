@@ -78,7 +78,7 @@ const Modal = ({
             <div className="relative p-6 flex-auto">{body}</div>
             {/* Footer */}
             <div className="flex flex-col gap-2 p-6">
-              <div className="flex flex-row items-center gap-4 w-full">
+              <div className="flex flex-row-reverse items-center gap-4 w-full">
                 <Button
                   disabled={disabled}
                   label={actionLabel}

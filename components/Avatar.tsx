@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 type Props = {
-  src?: string;
+  src?: string | null;
 };
 
 const Avatar = ({ src }: Props) => {
