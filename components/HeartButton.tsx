@@ -1,5 +1,6 @@
 "use client";
 
+import useFavorite from "@/hooks/useFavorite";
 import { SafeUser } from "@/types";
 import clsx from "clsx";
 import React from "react";
@@ -11,8 +12,10 @@ type Props = {
 };
 
 const HeartButton = ({ listingId, currentUser }: Props) => {
-  const hasFavorited = false;
-  const toggleFavorite = () => {};
+  const { hasFavorited, toggleFavorite } = useFavorite({
+    listingId,
+    currentUser,
+  });
   return (
     <div
       onClick={toggleFavorite}
