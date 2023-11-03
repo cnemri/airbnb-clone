@@ -80,6 +80,7 @@ const UserMenu = ({ currentUser }: Props) => {
                 <hr />
                 <MenuItem
                   onClick={() => {
+                    router.push("/");
                     signOut();
                   }}
                   label="Logout"

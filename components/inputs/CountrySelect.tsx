@@ -4,7 +4,7 @@ import useCountries from "@/hooks/useCountries";
 import Select from "react-select";
 import React from "react";
 
-type CountrySelectValue = {
+export type CountrySelectValue = {
   flag: string;
   label: string;
   latlng: number[];
