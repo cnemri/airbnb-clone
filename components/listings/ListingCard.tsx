@@ -16,7 +16,7 @@ type Props = {
   disabled?: boolean;
   actionLabel?: string;
   actionId?: string;
-  currentUser?: SafeUser;
+  currentUser?: SafeUser | null;
 };
 
 const ListingCard = ({
@@ -80,9 +80,7 @@ const ListingCard = ({
         </div>
         <div className="flex flex-row items-center gap-1">
           <div className="font-semibold">$ {price}</div>
-          <div className="">
-            {!reservation && <div className="font-light ">night</div>}
-          </div>
+          <div>{!reservation && <div className="font-light ">night</div>}</div>
           {onAction && actionLabel && (
             <Button
               disabled={disabled}
